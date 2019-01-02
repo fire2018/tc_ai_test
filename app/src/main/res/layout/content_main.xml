@@ -12,9 +12,12 @@
 		android:id="@+id/iddetect"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
+		android:layout_marginStart="8dp"
+		android:layout_marginEnd="8dp"
 		android:text="身份证OCR识别"
-		tools:layout_editor_absoluteX="23dp"
-		tools:layout_editor_absoluteY="45dp" />
+		app:layout_constraintEnd_toStartOf="@+id/idocr"
+		app:layout_constraintStart_toStartOf="parent"
+		tools:layout_editor_absoluteY="52dp" />
 
 	<Button
 		android:id="@+id/chat"
@@ -22,34 +25,45 @@
 		android:layout_height="wrap_content"
 		android:layout_marginStart="30dp"
 		android:layout_marginTop="60dp"
-		android:layout_marginEnd="259dp"
+		android:layout_marginEnd="264dp"
+		android:layout_marginBottom="39dp"
 		android:text="智能聊天"
+		app:layout_constraintBottom_toTopOf="@+id/textView"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@+id/editText" />
 
 	<TextView
 		android:id="@+id/textView"
-		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginStart="30dp"
-		android:layout_marginTop="40dp"
-		android:layout_marginEnd="252dp"
-		android:layout_marginBottom="127dp"
+		android:layout_width="100dp"
 		android:text="TextView"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/chat" />
+		app:layout_constraintTop_toBottomOf="@+id/chat"/>
 
 	<EditText
 		android:id="@+id/editText"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
+		android:layout_width="374dp"
+		android:layout_height="336dp"
 		android:layout_marginTop="80dp"
 		android:ems="10"
-		android:inputType="textPersonName"
+		android:inputType="text|textMultiLine|textImeMultiLine"
+		android:selectAllOnFocus="true"
+		android:singleLine="false"
 		android:text="Name"
+		android:textAppearance="@style/TextAppearance.AppCompat"
 		app:layout_constraintTop_toBottomOf="@+id/iddetect"
-		tools:layout_editor_absoluteX="30dp" />
+		tools:layout_editor_absoluteX="4dp" />
+
+	<Button
+		android:id="@+id/idocr"
+		android:layout_width="111dp"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="40dp"
+		android:layout_marginBottom="80dp"
+		android:text="图片文字识别"
+		app:layout_constraintBottom_toTopOf="@+id/editText"
+		app:layout_constraintEnd_toEndOf="parent" />
 </android.support.constraint.ConstraintLayout>
