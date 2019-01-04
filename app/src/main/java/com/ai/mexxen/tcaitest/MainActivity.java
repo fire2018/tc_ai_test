@@ -44,8 +44,8 @@ public class MainActivity extends AppCompatActivity {
     public int iAction = 0;
 
     //设置AppID/AppKey
-    public static final String AppID = "2109086611";
-    public static final String AppKey = "dZACwRVu2ZBQ9HBa";
+    public static final String AppID = "your appid";
+    public static final String AppKey = "your appkey";
 
     // 初始化一个TAipFace
     TAipOcr OcrClient = new TAipOcr(AppID,AppKey);
